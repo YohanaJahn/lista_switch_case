@@ -1,18 +1,63 @@
-<meta charset="UTF-8">
+<meta charset="UTF-8" />
 <script>
-    /*
+  /*
     //PROBLEMA: Faça um script que leia 2 números e em seguida pergunte ao usuário qual operação ele deseja realizar. O resultado da operação deve ser acompanhado de uma frase que diga se o número é:
     - par ou ímpar;
     - positivo ou negativo;
     - inteiro ou decimal.
     */
 
-    //ENTRADA
-
-
-    //PROCESSAMENTO
-
-    
-    //SAÍDA
-
+  //ENTRADA
+  const num1 = Number(prompt("Insira um número :").trim().replace(",", "."));
+  const operacao = prompt(
+    "Insira a operação que deseja. A = Adição, S = Subtração, D = Divisão ou M = Multiplicaçao ."
+  )
+    .trim()
+    .toUpperCase();
+  const num2 = Number(prompt("Insira um número :").trim().replace(",", "."));
+  //PROCESSAMENTO
+  let mensagemFinal = `O resultado será `;
+  let num3;
+  switch (operacao) {
+    case "A":
+      num3 = num1 + num2;
+      mensagemFinal = mensagemFinal + num3;
+      break;
+    case "S":
+      num3 = num1 - num2;
+      mensagemFinal = mensagemFinal + num3;
+      break;
+    case "D":
+      num3 = num1 / num2;
+      mensagemFinal = mensagemFinal + num3;
+      break;
+    case "M":
+      num3 = num1 * num2;
+      mensagemFinal = mensagemFinal + num3;
+      break;
+  }
+  switch (num3 % 2) {
+    case 0:
+      mensagemFinal = mensagemFinal + ` sendo par, `;
+      break;
+    default:
+      mensagemFinal = mensagemFinal + ` sendo par, `;
+      break;
+  }
+  switch (num3 % 1) {
+    case 0:
+      mensagemFinal = mensagemFinal + `inteiro e `;
+      break;
+    default:
+      mensagemFinal = mensagemFinal + `decimal e `;
+  }
+  switch (num3 > 0) {
+    case true:
+      mensagemFinal = mensagemFinal + `positivo.`;
+      break;
+    default:
+      mensagemFinal = mensagemFinal + `negativo.`;
+  }
+  alert (mensagemFinal)
+  //SAÍDA
 </script>
