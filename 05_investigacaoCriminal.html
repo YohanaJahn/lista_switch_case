@@ -11,10 +11,30 @@
     */
 
     //ENTRADA
-
-    
+    const P1 = Number(prompt("Telefonou para a vítima? Responda com S ou N!").toUpperCase().replace("S", "1").replace("N", "0").trim());
+    const P2 = Number(prompt("Esteve no local do crime? Responda com S ou N!").toUpperCase().replace("S", "1").replace("N", "0").trim());
+    const P3 = Number(prompt("Mora perto da vítima? Responda com S ou N!").toUpperCase().replace("S", "1").replace("N", "0").trim());
+    const P4 = Number(prompt("Devia para a vítima? Responda com S ou N!").toUpperCase().replace("S", "1").replace("N", "0").trim());
+    const P5 = Number(prompt("Já trabalhou com a vítima? Responda com S ou N!").toUpperCase().replace("S", "1").replace("N", "0").trim()); 
     //PROCESSAMENTO
-
+    const soma = P1 + P2 + P3 + P4 + P5
+    switch (soma) {
+        case 0: case 1:
+            alert("Você é Inocente!")
+            break;
+        case 2:
+            alert("Você é Suspeito!")
+            break;
+        case 3: case 4:
+            alert("Você é Cúmplice!")
+            break;
+        case 5: 
+        alert("Você é o ASSASSINO! CORRE ANTES QUE EU COMA TEU CU!!!!!!!!!!!!!")
+        break;
+        default:
+        alert("Respostas Invalidas!!!!!!")
+            break;
+    }
 
     //SAÍDA
 

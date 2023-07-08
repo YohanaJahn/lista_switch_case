@@ -6,11 +6,59 @@
     */
 
     //ENTRADA
-
+    const hemisfério = prompt("Informe em qual hemisfério está. Responda com N = norte e S = sul.").trim().toUpperCase();
+    const mes = Number(prompt("Informe em qual mês está. Responda com números.").trim());
     
     //PROCESSAMENTO
 
+    switch (hemisfério){
+        case "S": 
+        switch (mes){
+            case 12: 
+            case 1: 
+            case 2: 
+            alert(`Estamos no verão no hemisfério sul.`);
+            break;
+            case 3: 
+            case 4: 
+            case 5: 
+            alert(`Estamos no outuno no hemisfério sul.`);
+            break;
+            case 6: 
+            case 7: 
+            case 8: 
+            alert(`Estamos no inverno no hemisfério sul.`);
+            break;
+            case 9: 
+            case 10: 
+            case 11: 
+            alert(`Estamos na primavera no hemisfério sul.`);
+            break;
+        }
+        break;
 
-    //SAÍDA
-
+        case "N": 
+        switch (mes){
+            case 12: 
+            case 1: 
+            case 2: 
+            alert(`Estamos no inverno no hemisfério norte.`);
+            break;
+            case 3: 
+            case 4: 
+            case 5: 
+            alert(`Estamos no primavera no hemisfério norte.`);
+            break;
+            case 6: 
+            case 7: 
+            case 8: 
+            alert(`Estamos no verão no hemisfério norte.`);
+            break;
+            case 9: 
+            case 10: 
+            case 11: 
+            alert(`Estamos na outono no hemisfério norte.`);
+            break;
+        }
+    }
 </script>
